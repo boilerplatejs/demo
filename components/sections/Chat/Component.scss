@@ -1,0 +1,19 @@
+.chat {
+  ul {
+    margin-top: 5em;
+  }
+  input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  form {
+    margin: 30px 15px;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    :global(.btn) {
+      margin-left: 10px;
+    }
+  }
+}

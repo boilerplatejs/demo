@@ -1,0 +1,14 @@
+{
+  "name": "@vitruvian-tech/app-studio-demo",
+  "version": "1.0.0-pre.1",
+  "description": "",
+  "main": "lib",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter C. Romano <pete@vitruvian.tech> (http://github.com/vitruvian-tech)",
+  "license": "BSD-3-Clause"
+}
