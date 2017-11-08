@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import Config from '../../../../../../src/Config';
 import {Section} from '@vitruvian-tech/app-studio-core/components/layout';
 import { CounterButton } from '@vitruvian-tech/app-studio-demo/components/buttons';
 
@@ -9,8 +8,7 @@ export default class extends Section {
     const styles = require('./Component.scss');
     return (
       <Section>
-        <h1>{Config.name}</h1>
-        <h2>{Config.description}</h2>
+        <h1>Demo</h1>
         <p>This starter boilerplate app uses the following technologies:</p>
         <ul>
           <li>
