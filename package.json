@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "postinstall": "machete install --bundle $npm_package_name && machete migrate up --bundle $npm_package_name",
-    "uninstall": "machete uninstall --bundle $npm_package_name"
+    "uninstall": "machete uninstall --bundle $npm_package_name -c"
   },
   "author": "Peter C. Romano <pete@vitruvian.tech> (http://github.com/vitruvian-tech)",
   "license": "BSD-3-Clause"
