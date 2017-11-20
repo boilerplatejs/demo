@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {reduxForm} from 'redux-form';
 import widgetValidation, {colors} from './Validator';
-import * as Widgets from '@vitruvian-tech/app-studio-demo/reducers/Widgets';
+import * as Widgets from '@vitruvian-tech/app-studio-demo/controllers/Widgets';
 
 const domOnlyProps = ({
   initialValue,

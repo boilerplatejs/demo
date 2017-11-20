@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connectMultireducer} from 'multireducer';
-import {increment} from '@vitruvian-tech/app-studio-demo/reducers/Counter';
+import {increment} from '@vitruvian-tech/app-studio-demo/controllers/Counter';
 
 @connectMultireducer(
   (key, state) => ({count: state['@vitruvian-tech/app-studio-demo'].counters[key].count}),

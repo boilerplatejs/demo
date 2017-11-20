@@ -3,7 +3,7 @@ import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {initializeWithKey} from 'redux-form';
 import {Section} from '@vitruvian-tech/app-studio-core/components/layout';
-import * as Widgets from '@vitruvian-tech/app-studio-demo/reducers/Widgets';
+import * as Widgets from '@vitruvian-tech/app-studio-demo/controllers/Widgets';
 import * as forms from '@vitruvian-tech/app-studio-demo/components/forms';
 
 @connect(

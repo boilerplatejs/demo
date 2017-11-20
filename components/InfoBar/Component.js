@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {load} from '@vitruvian-tech/app-studio-demo/reducers/Info';
+import {load} from '@vitruvian-tech/app-studio-demo/controllers/Info';
 
 @connect(
     state => ({info: state['@vitruvian-tech/app-studio-demo'].Info.data}),
