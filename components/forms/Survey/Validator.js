@@ -1,5 +1,5 @@
 import memoize from 'lru-memoize';
-import {createValidator, required, maxLength, email} from '@vitruvian-tech/app-studio-core/helpers/Validator';
+import {createValidator, required, maxLength, email} from '@vitruvian-tech/app-studio-core/lib/Validator';
 
 const surveyValidation = createValidator({
   name: [required, maxLength(10)],

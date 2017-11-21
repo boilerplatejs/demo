@@ -1,4 +1,4 @@
-import async from '@vitruvian-tech/app-studio-core/helpers/Promise';
+import async from '@vitruvian-tech/app-studio-core/lib/Promise';
 import load from './load';
 
 export default async((req, params, resolve, reject) => {

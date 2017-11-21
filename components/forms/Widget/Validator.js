@@ -1,4 +1,4 @@
-import {createValidator, required, maxLength, integer, oneOf} from '@vitruvian-tech/app-studio-core/helpers/Validator';
+import {createValidator, required, maxLength, integer, oneOf} from '@vitruvian-tech/app-studio-core/lib/Validator';
 
 export const colors = ['Blue', 'Fuchsia', 'Green', 'Orange', 'Red', 'Taupe'];
 
