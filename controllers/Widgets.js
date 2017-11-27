@@ -1,11 +1,11 @@
-const LOAD = '@vitruvian-tech/app-studio-demo/Widgets/LOAD';
-const LOAD_SUCCESS = '@vitruvian-tech/app-studio-demo/Widgets/LOAD_SUCCESS';
-const LOAD_FAIL = '@vitruvian-tech/app-studio-demo/Widgets/LOAD_FAIL';
-const EDIT_START = '@vitruvian-tech/app-studio-demo/Widgets/EDIT_START';
-const EDIT_STOP = '@vitruvian-tech/app-studio-demo/Widgets/EDIT_STOP';
-const SAVE = '@vitruvian-tech/app-studio-demo/Widgets/SAVE';
-const SAVE_SUCCESS = '@vitruvian-tech/app-studio-demo/Widgets/SAVE_SUCCESS';
-const SAVE_FAIL = '@vitruvian-tech/app-studio-demo/Widgets/SAVE_FAIL';
+const LOAD = '@machete-platform/demo-bundle/Widgets/LOAD';
+const LOAD_SUCCESS = '@machete-platform/demo-bundle/Widgets/LOAD_SUCCESS';
+const LOAD_FAIL = '@machete-platform/demo-bundle/Widgets/LOAD_FAIL';
+const EDIT_START = '@machete-platform/demo-bundle/Widgets/EDIT_START';
+const EDIT_STOP = '@machete-platform/demo-bundle/Widgets/EDIT_STOP';
+const SAVE = '@machete-platform/demo-bundle/Widgets/SAVE';
+const SAVE_SUCCESS = '@machete-platform/demo-bundle/Widgets/SAVE_SUCCESS';
+const SAVE_FAIL = '@machete-platform/demo-bundle/Widgets/SAVE_FAIL';
 
 const initialState = {
   loaded: false,
@@ -83,13 +83,13 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 export function isLoaded(state) {
-  return state['@vitruvian-tech/app-studio-demo'] && state['@vitruvian-tech/app-studio-demo'].Widgets && state['@vitruvian-tech/app-studio-demo'].Widgets.loaded;
+  return state['@machete-platform/demo-bundle'] && state['@machete-platform/demo-bundle'].Widgets && state['@machete-platform/demo-bundle'].Widgets.loaded;
 }
 
 export function load() {
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/@vitruvian-tech/app-studio-demo/Widgets/load/param1/param2') // params not used, just shown as demonstration
+    promise: (client) => client.get('/@machete-platform/demo-bundle/Widgets/load/param1/param2') // params not used, just shown as demonstration
   };
 }
 
@@ -97,7 +97,7 @@ export function save(widget) {
   return {
     types: [SAVE, SAVE_SUCCESS, SAVE_FAIL],
     id: widget.id,
-    promise: (client) => client.post('/@vitruvian-tech/app-studio-demo/Widgets/update', {
+    promise: (client) => client.post('/@machete-platform/demo-bundle/Widgets/update', {
       data: widget
     })
   };

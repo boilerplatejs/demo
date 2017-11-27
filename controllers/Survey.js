@@ -1,6 +1,6 @@
-const IS_VALID = '@vitruvian-tech/app-studio-demo/Survey/IS_VALID';
-const IS_VALID_SUCCESS = '@vitruvian-tech/app-studio-demo/Survey/IS_VALID_SUCCESS';
-const IS_VALID_FAIL = '@vitruvian-tech/app-studio-demo/Survey/IS_VALID_FAIL';
+const IS_VALID = '@machete-platform/demo-bundle/Survey/IS_VALID';
+const IS_VALID_SUCCESS = '@machete-platform/demo-bundle/Survey/IS_VALID_SUCCESS';
+const IS_VALID_FAIL = '@machete-platform/demo-bundle/Survey/IS_VALID_FAIL';
 
 const initialState = {
   saveError: null,
@@ -31,7 +31,7 @@ export default function reducer(state = initialState, action = {}) {
 export function isValidEmail(data) {
   return {
     types: [IS_VALID, IS_VALID_SUCCESS, IS_VALID_FAIL],
-    promise: (client) => client.post('/@vitruvian-tech/app-studio-demo/Survey/isValid', {
+    promise: (client) => client.post('/@machete-platform/demo-bundle/Survey/isValid', {
       data
     })
   };

@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {initialize} from 'redux-form';
-import {Section} from '@vitruvian-tech/app-studio-core/components/layout';
-import * as forms from '@vitruvian-tech/app-studio-demo/components/forms';
-import InfoBar from '@vitruvian-tech/app-studio-demo/components/InfoBar/Component';
-import MiniInfoBar from '@vitruvian-tech/app-studio-demo/components/MiniInfoBar';
+import {Section} from '@machete-platform/core-bundle/components/layout';
+import * as forms from '@machete-platform/demo-bundle/components/forms';
+import InfoBar from '@machete-platform/demo-bundle/components/InfoBar/Component';
+import MiniInfoBar from '@machete-platform/demo-bundle/components/MiniInfoBar';
 
 @connect(() => ({}), {initialize})
 

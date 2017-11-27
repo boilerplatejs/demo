@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import {Section} from '@vitruvian-tech/app-studio-core/components/layout';
-import { CounterButton } from '@vitruvian-tech/app-studio-demo/components/buttons';
+import {Section} from '@machete-platform/core-bundle/components/layout';
+import { CounterButton } from '@machete-platform/demo-bundle/components/buttons';
 
 export default class extends Section {
   render() {

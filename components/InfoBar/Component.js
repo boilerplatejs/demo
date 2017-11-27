@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {load} from '@vitruvian-tech/app-studio-demo/controllers/Info';
+import {load} from '@machete-platform/demo-bundle/controllers/Info';
 
 @connect(
-    state => ({info: state['@vitruvian-tech/app-studio-demo'].Info.data}),
+    state => ({info: state['@machete-platform/demo-bundle'].Info.data}),
     dispatch => bindActionCreators({load}, dispatch))
 export default class InfoBar extends Component {
   static propTypes = {
