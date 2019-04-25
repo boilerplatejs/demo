@@ -3,7 +3,7 @@ import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {initializeWithKey} from 'redux-form';
 import {Section} from '@machete-platform/core-bundle/components/layout';
-import * as Widgets from '@machete-platform/demo-bundle/controllers/Widgets';
+import * as Widgets from '@machete-platform/demo-bundle/actions/Widgets';
 import * as forms from '@machete-platform/demo-bundle/components/forms';
 
 @connect(

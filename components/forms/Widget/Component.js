@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {reduxForm} from 'redux-form';
 import widgetValidation, {colors} from './Validator';
-import * as Widgets from '@machete-platform/demo-bundle/controllers/Widgets';
+import * as Widgets from '@machete-platform/demo-bundle/actions/Widgets';
 
 const domOnlyProps = ({
   initialValue,

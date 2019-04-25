@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {load} from '@machete-platform/demo-bundle/controllers/Info';
+import {load} from '@machete-platform/demo-bundle/actions/Info';
 
 @connect(
     state => ({info: state['@machete-platform/demo-bundle'].Info.data}),

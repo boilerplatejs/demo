@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connectMultireducer} from 'multireducer';
-import {increment} from '@machete-platform/demo-bundle/controllers/Counter';
+import {increment} from '@machete-platform/demo-bundle/actions/Counter';
 
 @connectMultireducer(
   (key, state) => ({count: state['@machete-platform/demo-bundle'].counters[key].count}),
