@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {Section} from '@machete-platform/core-bundle/components/layout';
 
 @connect(
-  state => ({user: state['@machete-platform/core-bundle'].Auth.user})
+  state => ({user: state['@machete-platform/core-bundle'].Session.user})
 )
 export default class extends Section {
 
