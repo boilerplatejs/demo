@@ -21,16 +21,16 @@ export default class extends Section {
   componentDidMount() {
     if (__CLIENT__) {
       const socket = Socket.get();
-      socket.on('chat/message', this.onMessageReceived);
+      socket.on('@machete-platform/demo-bundle/Chat/message', this.onMessageReceived);
       setTimeout(() => {
-        socket.emit('chat/history', {offset: 0, length: 100});
+        socket.emit('@machete-platform/demo-bundle/Chat/history', {offset: 0, length: 100});
       }, 100);
     }
   }
 
   componentWillUnmount() {
     if (__CLIENT__) {
-      Socket.get().removeListener('chat/message', this.onMessageReceived);
+      Socket.get().removeListener('@machete-platform/demo-bundle/Chat/message', this.onMessageReceived);
     }
   }
 
@@ -47,7 +47,7 @@ export default class extends Section {
 
     this.setState({message: ''});
 
-    Socket.get().emit('chat/message', {
+    Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
       from: this.props.user.name,
       text: msg
     });
