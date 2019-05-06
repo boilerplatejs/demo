@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
-import {connectMultireducer} from 'multireducer';
+import {connect} from 'react-redux';
 import {increment} from '@machete-platform/demo-bundle/actions/Counter';
 
-@connectMultireducer(
-  (key, state) => ({count: state['@machete-platform/demo-bundle'].counters[key].count}),
+@connect(
+  (state) => ({count: state['@machete-platform/demo-bundle'].counters[0].count}),
   {increment}
 )
 export default class extends Component {

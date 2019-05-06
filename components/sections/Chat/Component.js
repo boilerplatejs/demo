@@ -2,6 +2,7 @@ import React from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {Section} from '@machete-platform/core-bundle/components/layout';
+import Socket from '@machete-platform/core-bundle/lib/Socket';
 
 @connect(
   state => ({user: state['@machete-platform/core-bundle'].Session.user})
@@ -18,17 +19,18 @@ export default class extends Section {
   };
 
   componentDidMount() {
-    if (socket) {
-      socket.on('msg', this.onMessageReceived);
+    if (__CLIENT__) {
+      const socket = Socket.get();
+      socket.on('chat/message', this.onMessageReceived);
       setTimeout(() => {
-        socket.emit('history', {offset: 0, length: 100});
+        socket.emit('chat/history', {offset: 0, length: 100});
       }, 100);
     }
   }
 
   componentWillUnmount() {
-    if (socket) {
-      socket.removeListener('msg', this.onMessageReceived);
+    if (__CLIENT__) {
+      Socket.get().removeListener('chat/message', this.onMessageReceived);
     }
   }
 
@@ -45,7 +47,7 @@ export default class extends Section {
 
     this.setState({message: ''});
 
-    socket.emit('msg', {
+    Socket.get().emit('chat/message', {
       from: this.props.user.name,
       text: msg
     });

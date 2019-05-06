@@ -1,4 +1,4 @@
-import {asyncConnect} from 'redux-async-connect';
+import {asyncConnect} from 'redux-async-connect-react16';
 import {Page} from '@vitruvian-tech/machete-bundle/components/layout';
 import * as Info from '@machete-platform/demo-bundle/actions/Info';
 
