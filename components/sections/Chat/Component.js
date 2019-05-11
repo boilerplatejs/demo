@@ -48,7 +48,7 @@ export default class extends Section {
     this.setState({message: ''});
 
     Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
-      from: this.props.user.name,
+      from: this.props.user['@machete-platform/demo-bundle'].name,
       text: msg
     });
   }
