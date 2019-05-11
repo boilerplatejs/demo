@@ -3,7 +3,7 @@ import {Page} from '@vitruvian-tech/machete-bundle/components/layout';
 
 @connect(state => {
   const user = state['@machete-platform/core-bundle'].Session.user;
-  const name = user && user['@machete-platform/demo-bundle'].nickname;
+  const name = user && user['@machete-platform/core-bundle'].nickname;
   return { title: `${name ? '@' + name : 'Machete™ Theme Platform'} - Chat` };
 })
 

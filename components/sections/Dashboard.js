@@ -20,7 +20,7 @@ export default class extends Section {
         <h1>Dashboard</h1>
 
         <div>
-          <p>Hi, @{user['@machete-platform/demo-bundle'].nickname}. You have just successfully logged in, and were forwarded here
+          <p>Hi, @{user['@machete-platform/core-bundle'].nickname}. You have just successfully logged in, and were forwarded here
             by <code>componentWillReceiveProps()</code> in <code>App.js</code>, which is listening to
             the auth reducer via redux <code>@connect</code>. How exciting!
           </p>

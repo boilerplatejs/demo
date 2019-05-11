@@ -10,7 +10,7 @@ export default class {
 
     await Session.create({
       LayoutId,
-      service: '@machete-platform/demo-bundle'
+      service: '@machete-platform/core-bundle:Auth0'
     });
   }
 
@@ -19,7 +19,7 @@ export default class {
 
     await Session.destroy({
       where: {
-        service: '@machete-platform/demo-bundle'
+        service: '@machete-platform/demo-bundle:Auth0'
       }
     });
   }

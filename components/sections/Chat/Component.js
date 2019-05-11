@@ -4,9 +4,8 @@ import {connect} from 'react-redux';
 import {Section} from '@machete-platform/core-bundle/components/layout';
 import Socket from '@machete-platform/core-bundle/lib/Socket';
 
-@connect(
-  state => ({user: state['@machete-platform/core-bundle'].Session.user})
-)
+@connect(state => ({user: state['@machete-platform/core-bundle'].Session.user}))
+
 export default class extends Section {
 
   static propTypes = {
@@ -48,7 +47,7 @@ export default class extends Section {
     this.setState({message: ''});
 
     Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
-      from: this.props.user['@machete-platform/demo-bundle'].nickname,
+      from: this.props.user['@machete-platform/core-bundle'].nickname,
       text: msg
     });
   }

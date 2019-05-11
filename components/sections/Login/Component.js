@@ -7,7 +7,8 @@ import * as Session from '@machete-platform/core-bundle/actions/Session';
 
 @connect(state => ({
   user: state['@machete-platform/core-bundle'].Session.user,
-  hash: state.router.location.hash
+  hash: state.router.location.hash,
+  config: state['@machete-platform/core-bundle'].Config['@machete-platform/core-bundle']
 }), { ...Session, push })
 
 export default class extends Section {
@@ -16,7 +17,8 @@ export default class extends Section {
     login: PropTypes.func,
     logout: PropTypes.func,
     hash: PropTypes.string,
-    push: PropTypes.func.isRequired
+    push: PropTypes.func.isRequired,
+    config: PropTypes.object
   };
 
   componentWillMount = () => {
@@ -38,7 +40,7 @@ export default class extends Section {
 
   login = (event) => {
     event.preventDefault();
-    global.location = `https://dev-inw25gf0.auth0.com/authorize?redirect_uri=${location.protocol}//${location.host}${location.pathname}&scope=openid%20profile%20email&response_type=token&client_id=NnqQOByZ7Y5nPMHGkaiYTkkqT72ukLJK&connection=Username-Password-Authentication`;
+    global.location = `https://${this.props.config ? this.props.config.auth0Domain : 'dev-inw25gf0'}.auth0.com/authorize?redirect_uri=${location.protocol}//${location.host}${location.pathname}&scope=openid%20profile%20email&response_type=token&client_id=NnqQOByZ7Y5nPMHGkaiYTkkqT72ukLJK&connection=Username-Password-Authentication`;
   };
 
   render() {
@@ -49,7 +51,7 @@ export default class extends Section {
         <h1>Login</h1>
         {!user && <button className="btn btn-success" onClick={this.login}><i className="fa fa-sign-in"/>{' '}Log In</button>}
         {user && <React.Fragment>
-          <h2>Hello, @{user['@machete-platform/demo-bundle'].nickname}!</h2>
+          <h2>Hello, @{user['@machete-platform/core-bundle'].nickname}!</h2>
           <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>
         </React.Fragment>}
       </Section>
