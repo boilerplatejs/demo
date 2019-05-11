@@ -48,7 +48,7 @@ export default class extends Section {
     this.setState({message: ''});
 
     Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
-      from: this.props.user['@machete-platform/demo-bundle'].name,
+      from: this.props.user['@machete-platform/demo-bundle'].nickname,
       text: msg
     });
   }
@@ -60,13 +60,7 @@ export default class extends Section {
     return (
       <Section className={styles.chat}>
         <h1>Chat</h1>
-        {user &&
-        <div>
-          <ul>
-          {this.state.messages.map((msg) => {
-            return <li key={`chat.msg.${msg.id}`}>{msg.from}: {msg.text}</li>;
-          })}
-          </ul>
+        {user && <React.Fragment>
           <form className="login-form" onSubmit={this.handleSubmit}>
             <input type="text" ref="message" placeholder="Enter your message"
              value={this.state.message}
@@ -74,10 +68,14 @@ export default class extends Section {
                this.setState({message: event.target.value});
              }
             }/>
-            <button className="btn" onClick={this.handleSubmit}>Send</button>
+            <button className="btn btn-success" onClick={this.handleSubmit}>Send</button>
           </form>
-        </div>
-        }
+          <ul>
+            {this.state.messages.map((msg) => {
+              return <li key={`chat.msg.${msg.id}`}>@{msg.from}: {msg.text}</li>;
+            })}
+          </ul>
+        </React.Fragment>}
       </Section>
     );
   }
