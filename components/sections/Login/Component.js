@@ -40,7 +40,7 @@ export default class extends Section {
 
   login = (event) => {
     event.preventDefault();
-    global.location = `https://${this.props.config ? this.props.config.auth0Domain : 'dev-inw25gf0'}.auth0.com/authorize?redirect_uri=${location.protocol}//${location.host}${location.pathname}&scope=openid%20profile%20email&response_type=token&client_id=NnqQOByZ7Y5nPMHGkaiYTkkqT72ukLJK&connection=Username-Password-Authentication`;
+    global.location = `https://${this.props.config.auth0Domain}.auth0.com/authorize?redirect_uri=${location.protocol}//${location.host}${location.pathname}&scope=openid%20profile%20email&response_type=token&client_id=${this.props.config.auth0ClientId}&connection=Username-Password-Authentication`;
   };
 
   render() {
@@ -51,7 +51,7 @@ export default class extends Section {
         <h1>Login</h1>
         {!user && <button className="btn btn-success" onClick={this.login}><i className="fa fa-sign-in"/>{' '}Log In</button>}
         {user && <React.Fragment>
-          <h2>Hello, @{user['@machete-platform/core-bundle'].nickname}!</h2>
+          <h2>Hello, @{user['@machete-platform/core-bundle'].Auth0.nickname}!</h2>
           <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>
         </React.Fragment>}
       </Section>

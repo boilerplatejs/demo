@@ -47,7 +47,7 @@ export default class extends Section {
     this.setState({message: ''});
 
     Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
-      from: this.props.user['@machete-platform/core-bundle'].nickname,
+      from: this.props.user['@machete-platform/core-bundle'].Auth0.nickname,
       text: msg
     });
   }
