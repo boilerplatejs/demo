@@ -7,7 +7,7 @@
     "mount": "machete mount --bundle $(pwd)",
     "save": "machete save --bundle $(pwd)",
     "delete": "machete delete --bundle $npm_package_name",
-    "install": "machete install --bundle $npm_package_name && npm run upgrade",
+    "postinstall": "machete install --bundle $npm_package_name && npm run upgrade",
     "uninstall": "machete uninstall --bundle $npm_package_name",
     "upgrade": "machete migrate up --bundle $npm_package_name",
     "downgrade": "machete migrate down --bundle $npm_package_name"
