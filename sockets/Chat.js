@@ -7,7 +7,7 @@ export const history = (socket, io) => data => {
         const msgNo = (messageIndex + index) % bufferSize;
         const msg = messageBuffer[msgNo];
         if (msg) {
-            socket.emit('@machete-platform/demo-bundle/Chat/message', msg);
+            socket.emit('@boilerplatejs/demo/Chat/message', msg);
         }
     }
 };
@@ -16,5 +16,5 @@ export const message = (socket, io) => data => {
     data.id = messageIndex;
     messageBuffer[messageIndex % bufferSize] = data;
     messageIndex++;
-    io.emit('@machete-platform/demo-bundle/Chat/message', data);
+    io.emit('@boilerplatejs/demo/Chat/message', data);
 };

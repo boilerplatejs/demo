@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
-import {Page} from '@vitruvian-tech/machete-bundle/components/layout';
+import {Page} from '@vitruviantech/web/components/layout';
 
 @connect(state => {
-  const user = state['@machete-platform/core-bundle'].Session.user;
-  const name = user && user['@machete-platform/core-bundle'].Auth0.nickname;
-  return { title: `${name ? '@' + name : 'Machete™ Theme Platform'} - Chat` };
+  const user = state['@boilerplatejs/core'].Session.user;
+  const name = user && user['@boilerplatejs/core'].Auth0.nickname;
+  return { title: `Chat - ${name ? '@' + name : 'BoilerplateJS™'}` };
 })
 
 export default class extends Page {}

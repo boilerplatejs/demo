@@ -1,4 +1,4 @@
-import {getModels} from '@machete-platform/core-bundle/lib/Sequelize';
+import {getModels} from '@boilerplatejs/core/lib/Sequelize';
 
 export default class {
   static async up(models, sequelize, DataTypes) {
@@ -6,24 +6,24 @@ export default class {
 
     await Page.create({
       route: 'chat',
-      title: 'VitruvianTech - Chat',
-      page: '@machete-platform/demo-bundle:Chat',
-      sections: '["@machete-platform/demo-bundle:Chat"]',
+      title: 'Chat - BoilerplateJS™',
+      page: '@boilerplatejs/demo:Chat',
+      sections: '["@boilerplatejs/demo:Chat"]',
       auth: true
     });
 
     await Page.create({
       route: 'survey',
-      title: 'VitruvianTech - Survey',
-      page: '@machete-platform/demo-bundle:Survey',
-      sections: '["@machete-platform/demo-bundle:Survey"]'
+      title: 'Survey - BoilerplateJS™',
+      page: '@boilerplatejs/demo:Survey',
+      sections: '["@boilerplatejs/demo:Survey"]'
     });
 
     await Page.create({
       route: 'widgets',
-      title: 'VitruvianTech - Widgets',
-      page: '@machete-platform/demo-bundle:Widgets',
-      sections: '["@machete-platform/demo-bundle:Widgets"]'
+      title: 'Widgets - BoilerplateJS™',
+      page: '@boilerplatejs/demo:Widgets',
+      sections: '["@boilerplatejs/demo:Widgets"]'
     });
   }
 
@@ -33,9 +33,9 @@ export default class {
     await Page.destroy({
       where: {
         route: 'chat',
-        title: 'VitruvianTech - Chat',
-        page: '@machete-platform/demo-bundle:Chat',
-        sections: '["@machete-platform/demo-bundle:Chat"]',
+        title: 'Chat - BoilerplateJS™',
+        page: '@boilerplatejs/demo:Chat',
+        sections: '["@boilerplatejs/demo:Chat"]',
         auth: true
       }
     });
@@ -43,18 +43,18 @@ export default class {
     await Page.destroy({
       where: {
         route: 'survey',
-        title: 'VitruvianTech - Survey',
-        page: '@machete-platform/demo-bundle:Survey',
-        sections: '["@machete-platform/demo-bundle:Survey"]'
+        title: 'Survey - BoilerplateJS™',
+        page: '@boilerplatejs/demo:Survey',
+        sections: '["@boilerplatejs/demo:Survey"]'
       }
     });
 
     await Page.destroy({
       where: {
         route: 'widgets',
-        title: 'VitruvianTech - Widgets',
-        page: '@machete-platform/demo-bundle:Widgets',
-        sections: '["@machete-platform/demo-bundle:Widgets"]'
+        title: 'Widgets - BoilerplateJS™',
+        page: '@boilerplatejs/demo:Widgets',
+        sections: '["@boilerplatejs/demo:Widgets"]'
       }
     });
   }

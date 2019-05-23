@@ -1,9 +1,9 @@
-# Machete
+# BoilerplateJS™
 
 ## Demo Bundle
 
-Bundle designed for use within the Machete app theming platform.
+Bundle designed for use within the BoilerplateJS™ app development platform.
 
 ---
 
-© 2017 Vitruvian Technology, Corp.
+© 2019 VitruvianTech

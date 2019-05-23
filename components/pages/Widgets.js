@@ -1,6 +1,6 @@
 import {asyncConnect} from 'redux-async-connect-react16';
-import {Page} from '@vitruvian-tech/machete-bundle/components/layout';
-import * as Widgets from '@machete-platform/demo-bundle/actions/Widgets';
+import {Page} from '@vitruviantech/web/components/layout';
+import * as Widgets from '@boilerplatejs/demo/actions/Widgets';
 
 @asyncConnect([{
   deferred: true,

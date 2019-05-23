@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {reduxForm} from 'redux-form';
 import widgetValidation, {colors} from './Validator';
-import * as Widgets from '@machete-platform/demo-bundle/actions/Widgets';
+import * as Widgets from '@boilerplatejs/demo/actions/Widgets';
 
 const domOnlyProps = ({
   initialValue,
@@ -22,7 +22,7 @@ const domOnlyProps = ({
   ...domProps }) => domProps;
 
 @connect(
-  state => ({ saveError: state['@machete-platform/demo-bundle'].Widgets.saveError }),
+  state => ({ saveError: state['@boilerplatejs/demo'].Widgets.saveError }),
   dispatch => bindActionCreators(Widgets, dispatch)
 )
 
@@ -49,7 +49,7 @@ export default class extends Component {
   render() {
     const { editStop, fields: {id, color, sprocketCount, owner}, formKey, handleSubmit, invalid,
       pristine, save, submitting, saveError: { [formKey]: saveError }, values } = this.props;
-    const styles = require('@machete-platform/demo-bundle/components/sections/Widgets/Component.scss');
+    const styles = require('@boilerplatejs/demo/components/sections/Widgets/Component.scss');
     return (
       <tr className={submitting ? styles.saving : ''}>
         <td className={styles.idCol}>{id.value}</td>

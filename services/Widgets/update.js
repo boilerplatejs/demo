@@ -1,4 +1,4 @@
-import async from '@machete-platform/core-bundle/lib/Promise';
+import async from '@boilerplatejs/core/lib/Promise';
 import load from './load';
 
 export default async((req, params, resolve, reject) => {

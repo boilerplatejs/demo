@@ -1,10 +1,10 @@
 import React from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import Socket from '@machete-platform/core-bundle/lib/Socket';
+import {Section} from '@boilerplatejs/core/components/layout';
+import Socket from '@boilerplatejs/core/lib/Socket';
 
-@connect(state => ({user: state['@machete-platform/core-bundle'].Session.user}))
+@connect(state => ({user: state['@boilerplatejs/core'].Session.user}))
 
 export default class extends Section {
 
@@ -20,16 +20,16 @@ export default class extends Section {
   componentDidMount() {
     if (__CLIENT__) {
       const socket = Socket.get();
-      socket.on('@machete-platform/demo-bundle/Chat/message', this.onMessageReceived);
+      socket.on('@boilerplatejs/demo/Chat/message', this.onMessageReceived);
       setTimeout(() => {
-        socket.emit('@machete-platform/demo-bundle/Chat/history', {offset: 0, length: 100});
+        socket.emit('@boilerplatejs/demo/Chat/history', {offset: 0, length: 100});
       }, 100);
     }
   }
 
   componentWillUnmount() {
     if (__CLIENT__) {
-      Socket.get().removeListener('@machete-platform/demo-bundle/Chat/message', this.onMessageReceived);
+      Socket.get().removeListener('@boilerplatejs/demo/Chat/message', this.onMessageReceived);
     }
   }
 
@@ -46,8 +46,8 @@ export default class extends Section {
 
     this.setState({message: ''});
 
-    Socket.get().emit('@machete-platform/demo-bundle/Chat/message', {
-      from: this.props.user['@machete-platform/core-bundle'].Auth0.nickname,
+    Socket.get().emit('@boilerplatejs/demo/Chat/message', {
+      from: this.props.user['@boilerplatejs/core'].Auth0.nickname,
       text: msg
     });
   }

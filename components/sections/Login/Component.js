@@ -2,13 +2,13 @@ import React from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import * as Session from '@machete-platform/core-bundle/actions/Session';
+import {Section} from '@boilerplatejs/core/components/layout';
+import * as Session from '@boilerplatejs/core/actions/Session';
 
 @connect(state => ({
-  user: state['@machete-platform/core-bundle'].Session.user,
+  user: state['@boilerplatejs/core'].Session.user,
   hash: state.router.location.hash,
-  config: state['@machete-platform/core-bundle'].Config['@machete-platform/core-bundle']
+  config: state['@boilerplatejs/core'].Config['@boilerplatejs/core']
 }), { ...Session, push })
 
 export default class extends Section {
@@ -51,7 +51,7 @@ export default class extends Section {
         <h1>Login</h1>
         {!user && <button className="btn btn-success" onClick={this.login}><i className="fa fa-sign-in"/>{' '}Log In</button>}
         {user && <React.Fragment>
-          <h2>Hello, @{user['@machete-platform/core-bundle'].Auth0.nickname}!</h2>
+          <h2>Hello, @{user['@boilerplatejs/core'].Auth0.nickname}!</h2>
           <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>
         </React.Fragment>}
       </Section>

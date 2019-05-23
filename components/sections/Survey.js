@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {initialize} from 'redux-form';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import * as forms from '@machete-platform/demo-bundle/components/forms';
-import InfoBar from '@machete-platform/demo-bundle/components/InfoBar/Component';
-import MiniInfoBar from '@machete-platform/demo-bundle/components/MiniInfoBar';
+import {Section} from '@boilerplatejs/core/components/layout';
+import * as forms from '@boilerplatejs/demo/components/forms';
+import InfoBar from '@boilerplatejs/demo/components/InfoBar/Component';
+import MiniInfoBar from '@boilerplatejs/demo/components/MiniInfoBar';
 
 @connect(() => ({}), {initialize})
 

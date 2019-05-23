@@ -1,4 +1,4 @@
-import {createValidator, required, maxLength, integer, oneOf} from '@machete-platform/core-bundle/lib/Validator';
+import {createValidator, required, maxLength, integer, oneOf} from '@boilerplatejs/core/lib/Validator';
 
 export const colors = ['Blue', 'Fuchsia', 'Green', 'Orange', 'Red', 'Taupe'];
 

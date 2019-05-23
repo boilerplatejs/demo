@@ -4,7 +4,7 @@ import {reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import surveyValidation from './Validator';
-import * as Survey from '@machete-platform/demo-bundle/actions/Survey';
+import * as Survey from '@boilerplatejs/demo/actions/Survey';
 
 const domOnlyProps = ({
   initialValue,

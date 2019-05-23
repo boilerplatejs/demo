@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
-import {increment} from '@machete-platform/demo-bundle/actions/Counter';
+import {increment} from '@boilerplatejs/demo/actions/Counter';
 
 @connect(
-  (state) => ({count: state['@machete-platform/demo-bundle'].counters[0].count}),
+  (state) => ({count: state['@boilerplatejs/demo'].counters[0].count}),
   {increment}
 )
 export default class extends Component {

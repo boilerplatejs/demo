@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import { CounterButton } from '@machete-platform/demo-bundle/components/buttons';
+import {Section} from '@boilerplatejs/core/components/layout';
+import { CounterButton } from '@boilerplatejs/demo/components/buttons';
 
 export default class extends Section {
   render() {

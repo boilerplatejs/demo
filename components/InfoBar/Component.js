@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {load} from '@machete-platform/demo-bundle/actions/Info';
+import {load} from '@boilerplatejs/demo/actions/Info';
 
 @connect(
-    state => ({info: state['@machete-platform/demo-bundle'].Info.data}),
+    state => ({info: state['@boilerplatejs/demo'].Info.data}),
     dispatch => bindActionCreators({load}, dispatch))
 export default class InfoBar extends Component {
   static propTypes = {

@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {initializeWithKey} from 'redux-form';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import * as Widgets from '@machete-platform/demo-bundle/actions/Widgets';
-import * as forms from '@machete-platform/demo-bundle/components/forms';
+import {Section} from '@boilerplatejs/core/components/layout';
+import * as Widgets from '@boilerplatejs/demo/actions/Widgets';
+import * as forms from '@boilerplatejs/demo/components/forms';
 
 @connect(
   state => ({
-    widgets: state['@machete-platform/demo-bundle'].Widgets.data,
-    editing: state['@machete-platform/demo-bundle'].Widgets.editing,
-    error: state['@machete-platform/demo-bundle'].Widgets.error,
-    loading: state['@machete-platform/demo-bundle'].Widgets.loading
+    widgets: state['@boilerplatejs/demo'].Widgets.data,
+    editing: state['@boilerplatejs/demo'].Widgets.editing,
+    error: state['@boilerplatejs/demo'].Widgets.error,
+    loading: state['@boilerplatejs/demo'].Widgets.loading
   }),
 
   {...Widgets, initializeWithKey })

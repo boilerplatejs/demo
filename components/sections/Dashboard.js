@@ -2,10 +2,10 @@ import React from 'react';
 import {PropTypes} from 'prop-types';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {Section} from '@machete-platform/core-bundle/components/layout';
-import * as Session from '@machete-platform/core-bundle/actions/Session';
+import {Section} from '@boilerplatejs/core/components/layout';
+import * as Session from '@boilerplatejs/core/actions/Session';
 
-@connect(state => ({user: state['@machete-platform/core-bundle'].Session.user}), Session)
+@connect(state => ({user: state['@boilerplatejs/core'].Session.user}), Session)
 
 export default class extends Section {
   static propTypes = {
@@ -20,7 +20,7 @@ export default class extends Section {
         <h1>Dashboard</h1>
 
         <div>
-          <p>Hi, @{user['@machete-platform/core-bundle'].Auth0.nickname}. You have just successfully logged in, and were forwarded here
+          <p>Hi, @{user['@boilerplatejs/core'].Auth0.nickname}. You have just successfully logged in, and were forwarded here
             by <code>componentWillReceiveProps()</code> in <code>App.js</code>, which is listening to
             the auth reducer via redux <code>@connect</code>. How exciting!
           </p>

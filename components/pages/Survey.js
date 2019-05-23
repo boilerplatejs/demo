@@ -1,6 +1,6 @@
 import {asyncConnect} from 'redux-async-connect-react16';
-import {Page} from '@vitruvian-tech/machete-bundle/components/layout';
-import * as Info from '@machete-platform/demo-bundle/actions/Info';
+import {Page} from '@vitruviantech/web/components/layout';
+import * as Info from '@boilerplatejs/demo/actions/Info';
 
 @asyncConnect([{
   deferred: true,

@@ -1,6 +1,6 @@
-const LOAD = '@machete-platform/demo-bundle/Info/LOAD';
-const LOAD_SUCCESS = '@machete-platform/demo-bundle/Info/LOAD_SUCCESS';
-const LOAD_FAIL = '@machete-platform/demo-bundle/Info/LOAD_FAIL';
+const LOAD = '@boilerplatejs/demo/Info/LOAD';
+const LOAD_SUCCESS = '@boilerplatejs/demo/Info/LOAD_SUCCESS';
+const LOAD_FAIL = '@boilerplatejs/demo/Info/LOAD_FAIL';
 
 const initialState = {
   loaded: false
@@ -33,12 +33,12 @@ export default function info(state = initialState, action = {}) {
 }
 
 export function isLoaded(state) {
-  return state['@machete-platform/demo-bundle'] && state['@machete-platform/demo-bundle'].Info && state['@machete-platform/demo-bundle'].Info.loaded;
+  return state['@boilerplatejs/demo'] && state['@boilerplatejs/demo'].Info && state['@boilerplatejs/demo'].Info.loaded;
 }
 
 export function load() {
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/@machete-platform/demo-bundle/Info/load')
+    promise: (client) => client.get('/@boilerplatejs/demo/Info/load')
   };
 }
